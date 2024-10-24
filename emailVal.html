@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let email = prompt("Please enter your email: ");
+
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\x@]+$/;
+
+        if (emailRegex.test(email)) {
+            console.log("Valid email");
+        } else {
+            console.log("Invalid email");
+        }
+    </script>
+</head>
+<body>
+    <h1>Javascript Email Validation</h1>
+</body>
+</html>
