@@ -1,61 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HTML Forms &amp; JS Validation</title>
-    <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
-    <form action="/submit" method="POST">
-        <h2>User Registration</h2>
+    <link rel="stylesheet" href="css/styles.css" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/dompurify@3.1.7/dist/purify.min.js"
+      integrity="sha256-ZAdXaZOlqhMD6vn++5Xlz8HAyAZFvTcX22cXJ+a1W5E="
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/formVal.js" defer></script>
+  </head>
+  <body>
+    <form action="/ " method="POST">
+      <h2>User Registration</h2>
 
-        <label for="first-name">First Name:</label>
-        <input type="text" id="first-name" name="first-name" required minlength="2" maxlength="30">
+      <label for="first-name">First Name:</label>
+      <input
+        type="text"
+        id="first-name"
+        name="first-name"
+        required
+        minlength="2"
+        maxlength="30"
+      />
 
-        
-        <label for="last-name">Last Name:</label>
-        <input type="text" id="last-name" name="last-name" required minlength="2" maxlength="30">
+      <label for="last-name">Last Name:</label>
+      <input
+        type="text"
+        id="last-name"
+        name="last-name"
+        required
+        minlength="2"
+        maxlength="30"
+      />
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required />
 
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required minlength="8" placehoder="At least 8 characters, 1 cap, 1 lowercase, 1 number, @!-/">
+      <label for="password">Password:</label>
+      <input
+        type="password"
+        id="password"
+        name="password"
+        required
+        minlength="8"
+        placehoder="At least 8 characters, 1 cap, 1 lowercase, 1 number, @!-/"
+      />
 
-        <label for="dob">Date of Birth:</label>
-        <input type="date" id="date" name="date" required>
+      <label for="phone">Phone Number:</label>
+      <input type="tel" id="phone" name="phone" required />
 
-        <label for="gender">Gender:</label>
-        <select name="gender" id="gender" required>
-            <option value="">--Select--</option>
-            <option value="male">Male</option>
-            <option value="female">Female</option>
-            <option value="other">Other</option>
-            <option value="prefer-not-to-say">Prefer not to say</option>
-        </select>
+      <label for="dob">Date of Birth:</label>
+      <input type="date" id="date" name="date" required />
 
-        <fieldset>
-            <legend>Preferences:</legend>
-            <input type="checkbox" id="newsletter" name="newsletter">
-            <label for="newsletter">Subscribe to Newsletter</label>
-            
-            <input type="radio" id="yes" name="updates" value="yes" required>
-            <label for="yes">Receive Product Updates</label>
+      <label for="gender">Gender:</label>
+      <select name="gender" id="gender" required>
+        <option value="">--Select--</option>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="other">Other</option>
+        <option value="prefer-not-to-say">Prefer not to say</option>
+      </select>
 
-            <input type="radio" id="no" name="updates" value="no">
-            <label for="no">No Product Updates</label>
-        </fieldset>
+      <fieldset>
+        <legend>Preferences:</legend>
+        <input type="checkbox" id="newsletter" name="newsletter" />
+        <label for="newsletter">Subscribe to Newsletter</label>
 
-        <label for="bio">Short Bio:</label>
-        <textarea name="bio" id="bio" rows="4" cols="50"></textarea>
+        <input type="radio" id="yes" name="updates" value="yes" required />
+        <label for="yes">Receive Product Updates</label>
 
-        <button type="submit">Register</button>
+        <input type="radio" id="no" name="updates" value="no" />
+        <label for="no">No Product Updates</label>
+      </fieldset>
 
+      <label for="bio">Short Bio:</label>
+      <textarea name="bio" id="bio" rows="4" cols="50"></textarea>
 
+      <button type="submit">Register</button>
     </form>
-
-    <script src="js/formVal.js"></script>
-    
-</body>
+  </body>
 </html>
